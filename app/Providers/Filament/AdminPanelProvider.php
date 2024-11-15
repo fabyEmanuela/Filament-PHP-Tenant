@@ -25,7 +25,8 @@ class AdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
-        $subdomainUrlConfig = '{tenant:slug}.' . env('TENANT_URL_DOMAIN');
+        // $subdomainUrlConfig = '{tenant:slug}.' . env('TENANT_URL_DOMAIN');
+      
         return $panel
             ->default()
             ->id('admin')
@@ -33,9 +34,9 @@ class AdminPanelProvider extends PanelProvider
             ->login()
             ->tenant(Tenant::class, slugAttribute: 'slug')
             ->tenantRegistration(RegisterTenant::class)
-            ->tenantDomain($subdomainUrlConfig)
+            // ->tenantDomain($subdomainUrlConfig)
             ->colors([
-                'primary' => '#4B8130',
+                'primary' => '#FFFF00',
             ])
             ->brandName('MK Place')
             ->brandLogo(asset('images/logo-custom.png'))
