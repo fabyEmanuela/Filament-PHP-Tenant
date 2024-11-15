@@ -8,7 +8,7 @@ use Filament\Forms\Form;
 use Filament\Pages\Tenancy\RegisterTenant as BaseRegisterTenant;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-
+//e uma pagina pos login 
 class RegisterTenant extends BaseRegisterTenant
 {
     public static function getLabel(): string
@@ -21,7 +21,6 @@ class RegisterTenant extends BaseRegisterTenant
         return $form
             ->schema([
                 TextInput::make('name'),
-                // ...
             ]);
     }
 
